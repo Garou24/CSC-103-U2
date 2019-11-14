@@ -40,13 +40,17 @@ The sun is shining brightly as you walk along the forest path. Having just finis
 
 Fog starts to collect along the path as you walk. The sun is setting slowly behind the trees and you know soon it will be dark. In the distance a wolf howls as to remind you of where you are.
 
-[[Continue-&gt;ch1_1]]</tw-passagedata><tw-passagedata pid="4" name="gamemenu" tags="" position="97,394" size="100,100">{(link:&quot;Save game&quot;)[
+[[Continue-&gt;ch1_1]]</tw-passagedata><tw-passagedata pid="4" name="gamemenu" tags="" position="98,391" size="100,100">{(link:&quot;Save game&quot;)[
   (if:(save-game:&quot;Slot A&quot;))[
     Game saved!
   ](else: )[
     Sorry, I couldn&#39;t save your game.
   ]
-]}</tw-passagedata><tw-passagedata pid="5" name="ch1_1" tags="" position="395,348" size="100,100">&lt;div style=&quot;background-color:grey;border:3px solid white&quot;&gt;
+]}
+{(if: $Saves contains &quot;Slot A&quot;)[
+  (link: &quot;Load game&quot;)[(load-game:&quot;Slot A&quot;)]
+]}
+(link: &#39;Back to game&#39;)[(goto: (history)&#39;s last)]</tw-passagedata><tw-passagedata pid="5" name="ch1_1" tags="" position="395,348" size="100,100">&lt;div style=&quot;background-color:grey;border:3px solid white&quot;&gt;
 Character: $name
 Health: (print: &#39;&lt;progress value=&quot;&#39; + (text: $health) + &#39;&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&#39;) Inventory
 Mana: (print: &#39;&lt;progress value=&quot;&#39; + (text: $mana) + &#39;&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&#39;) [[Menu-&gt;gamemenu]]
@@ -91,7 +95,22 @@ Character: $name
 Health: (print: &#39;&lt;progress value=&quot;&#39; + (text: $health) + &#39;&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&#39;) Inventory
 Mana: (print: &#39;&lt;progress value=&quot;&#39; + (text: $mana) + &#39;&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&#39;) [[Menu-&gt;gamemenu]]
 &lt;/div&gt;
-(if $race is &quot;Elf&quot;: As you approach the woman, you notice her pause for a moment as he stares hard at your elvish features, particularly your pointed ear.)</tw-passagedata><tw-passagedata pid="12" name="ch1_10" tags="" position="393,946" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="13" name="ch1_12" tags="" position="508,941" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="14" name="ch1_14" tags="" position="617,939" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
+(if $race is &quot;Elf&quot;: As you approach the woman, you notice her pause for a moment as he stares hard at your elvish features, particularly your pointed ear.)</tw-passagedata><tw-passagedata pid="12" name="ch1_10" tags="" position="393,946" size="100,100">&lt;div style=&quot;background-color:grey;border:3px solid white&quot;&gt;
+Character: $name
+Health: (print: &#39;&lt;progress value=&quot;&#39; + (text: $health) + &#39;&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&#39;) Inventory
+Mana: (print: &#39;&lt;progress value=&quot;&#39; + (text: $mana) + &#39;&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&#39;) [[Menu-&gt;gamemenu]]
+&lt;/div&gt;
+Maybe it was the wolf&#39;s natural instincts or it&#39;s highthened animal sense, but as you run up to attack, one of the wolfs turna around and lunges at you. It&#39;s teeth dig into your arm dealing 10 points of damage! (set: $health - 10) The wolf begins to rip and shake your arm as it&#39;s grip tightens. The violent motion causes your lantern to [[fall from your grip-&gt;ch1_16]].</tw-passagedata><tw-passagedata pid="13" name="ch1_12" tags="" position="508,941" size="100,100">&lt;div style=&quot;background-color:grey;border:3px solid white&quot;&gt;
+Character: $name
+Health: (print: &#39;&lt;progress value=&quot;&#39; + (text: $health) + &#39;&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&#39;) Inventory
+Mana: (print: &#39;&lt;progress value=&quot;&#39; + (text: $mana) + &#39;&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&#39;) [[Menu-&gt;gamemenu]]
+&lt;/div&gt;
+The wolves are now aware of your presence as you close in to join the melee. One of the wolves turns around and snarls at you as it&#39;s body tenses to pounce. Just then you reach back and with all your might [[throw your lantern-&gt;ch1_16]] right at it.</tw-passagedata><tw-passagedata pid="14" name="ch1_14" tags="" position="617,939" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="15" name="ch1_16" tags="" position="508,1091" size="100,100">&lt;div style=&quot;background-color:grey;border:3px solid white&quot;&gt;
+Character: $name
+Health: (print: &#39;&lt;progress value=&quot;&#39; + (text: $health) + &#39;&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&#39;) Inventory
+Mana: (print: &#39;&lt;progress value=&quot;&#39; + (text: $mana) + &#39;&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&#39;) [[Menu-&gt;gamemenu]]
+&lt;/div&gt;
+</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
