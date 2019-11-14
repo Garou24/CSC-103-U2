@@ -17,9 +17,7 @@
 tw-story[tags~="menu"] {
  background-image:url("https://images.unsplash.com/photo-1514539079130-25950c84af65?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1349&q=80"); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size:cover;
 }
-tw-story[tags~="ch1_0"] {
- background-image:url("https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80"); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size:cover;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="startmenu" tags="menu" position="205,48" size="100,100">&lt;center&gt;&lt;u&gt;&lt;strong&gt;&lt;font face=&quot;verdana&quot;&gt;The Shard of Shi&#39;Ar&lt;/font&gt;&lt;strong&gt;&lt;/u&gt;&lt;/center&gt;
+</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="startmenu" tags="menu" position="205,48" size="100,100">&lt;center&gt;&lt;u&gt;&lt;strong&gt;&lt;font face=&quot;verdana&quot;&gt;The Shard of Shi&#39;Ar&lt;/font&gt;&lt;strong&gt;&lt;/u&gt;&lt;/center&gt;
 
 [[Start New Game-&gt;charcreation]] 
 Load Game
@@ -100,7 +98,7 @@ Character: $name
 Health: (print: &#39;&lt;progress value=&quot;&#39; + (text: $health) + &#39;&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&#39;) Inventory
 Mana: (print: &#39;&lt;progress value=&quot;&#39; + (text: $mana) + &#39;&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&#39;) [[Menu-&gt;gamemenu]]
 &lt;/div&gt;
-Maybe it was the wolf&#39;s natural instincts or it&#39;s highthened animal sense, but as you run up to attack, one of the wolfs turna around and lunges at you. It&#39;s teeth dig into your arm dealing 10 points of damage! (set: $health - 10) The wolf begins to rip and shake your arm as it&#39;s grip tightens. The violent motion causes your lantern to [[fall from your grip-&gt;ch1_16]].</tw-passagedata><tw-passagedata pid="13" name="ch1_12" tags="" position="508,941" size="100,100">&lt;div style=&quot;background-color:grey;border:3px solid white&quot;&gt;
+Maybe it was the wolf&#39;s natural instincts or it&#39;s highthened animal sense, but as you run up to attack, one of the wolfs turna around and lunges at you. It&#39;s teeth dig into your arm dealing 10 points of damage! (set: $health to $health - 10) The wolf begins to rip and shake your arm as it&#39;s grip tightens. The violent motion causes your lantern to [[fall from your grip-&gt;ch1_16]].</tw-passagedata><tw-passagedata pid="13" name="ch1_12" tags="" position="508,941" size="100,100">&lt;div style=&quot;background-color:grey;border:3px solid white&quot;&gt;
 Character: $name
 Health: (print: &#39;&lt;progress value=&quot;&#39; + (text: $health) + &#39;&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&#39;) Inventory
 Mana: (print: &#39;&lt;progress value=&quot;&#39; + (text: $mana) + &#39;&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&#39;) [[Menu-&gt;gamemenu]]
